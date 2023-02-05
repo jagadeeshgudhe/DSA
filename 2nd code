@@ -1,0 +1,15 @@
+l=list(map(int,input().split()))
+t=[]
+for i in range(len(l)):
+    if l[i] not in t:
+        t.append(l[i])
+n=len(l)
+s=[]
+while t:
+    min=t[0]
+    for i in t:
+        if i<min:
+            min=i
+    s.append(min)
+    t.remove(min)
+print(s)
