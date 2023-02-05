@@ -1,0 +1,11 @@
+arr = list(map(int, input().split()))
+frequency_dict = {}
+for i in range(len(arr)):
+    if arr[i] in frequency_dict:
+        frequency_dict[arr[i]] += 1
+    else:
+        frequency_dict[arr[i]] = 1
+for key in frequency_dict:
+    if frequency_dict[key] > 1:
+        print("The frequency of", '"', key, '"',
+              "element is - ", frequency_dict[key])
